@@ -18,8 +18,8 @@ final checkTokenExpirationProvider = FutureProvider<String>((ref) async {
 class GraphQLClientService {
   static final _hasuraHostName = RemoteConfig.hasuraHostName;
   static final _connectionTimeout = RemoteConfig.connectionTimeout;
-  static final _httpsEndpoint = 'https://${_hasuraHostName}/v1/graphql';
-  static final _wssEndpoint = 'wss://${_hasuraHostName}/v1/graphql';
+  static final _httpsEndpoint = 'https://$_hasuraHostName/v1/graphql';
+  static final _wssEndpoint = 'wss://$_hasuraHostName/v1/graphql';
   static const Map<String, String> _headers = {
     'content-type': 'application/json',
     'x-hasura-admin-secret': 'Srf2020***',

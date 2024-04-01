@@ -17,8 +17,41 @@ class _CameraPageState extends ConsumerState<CameraPage> {
     super.initState();
   }
 
+  void startCamera() async {
+    cameras = await availableCameras();
+    cameraController = CameraController(
+      cameras[0],
+      ResolutionPreset.high,
+      enableAudio: false,
+    );
+    await cameraController.initialize().then((value) {
+      if (!mounted) {
+        return;
+      }
+      setState(() {});
+    }).catchError((e) {
+      print(e);
+    });
+  }
+
+  @override
+  void dispose() {
+    cameraController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    if (cameraController.value.isInitialized) {
+      return Scaffold(
+        body: Stack(
+          children: [
+            CameraPreview(cameraController),
+          ],
+        ),
+      );
+    } else {
+      return const SizedBox();
+    }
   }
 }
