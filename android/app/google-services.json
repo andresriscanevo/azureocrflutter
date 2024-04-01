@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "251093116694",
+    "project_id": "demoocrazure",
+    "storage_bucket": "demoocrazure.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:251093116694:android:10113879d86387f2d31237",
+        "android_client_info": {
+          "package_name": "com.example.demoocrcamera"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEt9zhfr3gr4GX4GWDhFRaYAJvVEY9vAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
